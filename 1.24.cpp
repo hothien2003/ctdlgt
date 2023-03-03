@@ -1,40 +1,31 @@
-#include<stdio.h>
-struct HopSua
+#include <iostream>
+using namespace std;
+
+typedef struct HopSua
 {
 	char NhanHieu[20];
 	float TrongLuong;
-	NGAY HanSuDung ;
-};
-struct Ngay 
+	int HanSuDung;
+}HOPSUA;
+
+void NhapHopSua(HOPSUA &hs)
 {
-	int Ngay,Thang,Nam;
-};
- typedef struct HopSua HOPSUA;
+	cout<<"Nhap nhan hieu: ";gets(hs.NhanHieu);
+	cout<<"Nhap trong luong: ";cin>>hs.TrongLuong;
+	cout<<"Nhap han su dung: ";cin>>hs.HanSuDung;
+}
 
- void NhapHopSua(HOPSUA &hs)
- {
- 	fflush(stdin);
- 	printf("Nhap nhan hieu: \n");
- 	gets(hs.NhanHieu);
+void XuatHopSua(HOPSUA hs)
+{
+	cout<<"Nhan hieu: "<<hs.NhanHieu<<endl;
+	cout<<"Trong luong: "<<hs.TrongLuong<<endl;
+	cout<<"Han su dung: "<<hs.HanSuDung<<endl;
+}
 
- 	printf("Nhap trong luong: \n");
- 	scanf("%f",&hs.TrongLuong);
-
- 	printf("Nhap han su dung: \n");
- 	NhapNgay (hs.HanSuDung);
- }
- void XuatHopSua(HOPSUA hs)
- {
- 	printf("Nhan hieu:%s\n",hs.NhanHieu);
- 	printf("Trong luong: %.2f(kg)\n",hs.TrongLuong);
- 	printf("Han su dung: \n");
- 	XuatNgay(hs.HanSuDung);
- }
 int main()
 {
 	HOPSUA h1;
 	NhapHopSua(h1);
 	XuatHopSua(h1);
-	getch();
 	return 0;
 }
