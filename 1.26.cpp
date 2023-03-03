@@ -1,31 +1,27 @@
+#include <iostream>
+using namespace std;
 
-#include <stdio.h>
-
-struct MatHang
+typedef struct MatHang
 {
 	char MatHang[20];
 	int DonGia;
 	int SoLuongTon;
-};
-typedef struct MatHang MATHANG;
+}MATHANG;
+
 void NhapMatHang(MATHANG &mh)
 {
-	fflush(stdin);
-	printf("Nhap mat hang: \n");
-	gets(mh.MatHang);
-
-	printf("Nhap don gia: \n");
-	scanf("%d",&mh.DonGia);
-
-	printf("Nhap so luong ton: \n");
-	scanf("%d",&mh.SoLuongTon);
+	cout <<"Nhap mat hang: "; gets(mh.MatHang);
+	cout <<"Nhap don gia: ";cin>>mh.DonGia;
+	cout <<"Nhap so luong ton: ";cin>>mh.SoLuongTon;
 }
+
 void XuatMatHang(MATHANG mh)
 {
-	printf("Mat hang:%s\n",mh.MatHang);
-	printf("Don gia:%d\n",mh.DonGia);
-	printf("So luong ton:%d\n",mh.SoLuongTon);
+	cout <<"Mat hang: "<<mh.MatHang<<endl;
+	cout <<"Don gia: "<<mh.DonGia<<endl;
+	cout <<"So luong ton: "<<mh.SoLuongTon<<endl;
 }
+
 int main()
 {
 	MATHANG m1;
