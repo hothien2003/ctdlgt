@@ -16,16 +16,7 @@ int main()
         printf("\nNhap a[%d] = ",i);
         scanf("%d", &a[i]);
     }
-    int pt;
-    for(int i=0;i<n-1;i++){
-        for(int j=i+1;j<n;j++){
-            if(a[i]<a[j]){
-                pt=a[i];
-                a[i]=a[j];
-                a[j]=pt;
-            }
-        }
-    }
+   
     printf("Mang sau khi nhap la:\n");
     for(int i=0; i< n; i++)
     {
